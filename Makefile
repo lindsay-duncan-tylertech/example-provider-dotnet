@@ -58,6 +58,7 @@ ci_webhook: run_tests
 ## =====================
 
 test: .env
+	dotnet build src
 	dotnet test tests
 
 run_tests: restore start $(WAIT_TARGET) test stop 
